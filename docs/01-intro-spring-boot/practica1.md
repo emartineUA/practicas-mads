@@ -2,7 +2,7 @@
 
 Configuración de Github Classroom
 
-- Una organización por curso: mads-ua-20-21, mads-ua-21-22, etc.
+- Una organización por curso: mads-ua-24-25, mads-ua-24-25, etc.
 - Para actualizar la organización a un plan Team gratuito usar la página:
 https://education.github.com/toolbox/offers/github-org-upgrades
 
@@ -26,7 +26,7 @@ Los objetivos principales son:
   DockerHub
   
 La duración de la práctica es de 1 semana, la fecha límite de
-entrega es el día 19 de septiembre y su puntuación es de 0,4 puntos en la nota final
+entrega es el día 24 de septiembre y su puntuación es de 0,4 puntos en la nota final
 de la asignatura.
 
 ## 1. Instalación de software ##
@@ -168,25 +168,25 @@ esta práctica debes seguir los siguientes pasos:
     <img src="imagenes/aceptar-classroom.png" width="500px"></img>
    
     Se creará automáticamente el repositorio `springboot-demo-app-<usuario>` en la
-    organización [mads-ua-23-24](https://github.com/mads-ua-23-24/). Es un
+    organización [mads-ua-24-25](https://github.com/mads-ua-24-25/). Es un
     repositorio privado al que tienes acceso tú y el profesor. Contiene
     el código inicial del proyecto demostración de Spring Boot (es una
     copia del repositorio
-    [domingogallardo/spring-boot-demoapp](https://github.com/domingogallardo/spring-boot-demoapp)).
+    [emartineUA/spring-boot-demoapp](https://github.com/emartineUA/spring-boot-demoapp)).
 
     <img src="imagenes/aplicacion-inicial-spring-boot.png" width="700px"></img>
     
     Es importante que tengas en cuenta que el repositorio recién
     creado no reside en tu cuenta, sino en la organización
-    `mads-ua-23-24`. Puedes acceder a él desde el _dashboard_ de GitHub que
+    `mads-ua-24-25`. Puedes acceder a él desde el _dashboard_ de GitHub que
     aparece cuando te logeas o pulsando en el icono de GitHub:
    
     <img src="imagenes/dashboard-github.png" width="700px"/>
 
-4. El profesor te invitará a formar parte de la organización `mads-ua-23-24`
+4. El profesor te invitará a formar parte de la organización `mads-ua-24-25`
    y recibirás un mensaje de correo electrónico en el que deberás
    aceptar esta invitación. También se puede aceptar la invitación
-   accediendo a <https://github.com/mads-ua-23-24>.
+   accediendo a <https://github.com/mads-ua-24-25>.
    
 
 ## 3. Aplicación Demo de Spring Boot ##
@@ -218,7 +218,7 @@ Lo primero que deberás hacer será descargar la aplicación
    anterior, usando el comando `git clone`:
   
     ```
-    $ git clone https://github.com/mads-ua-23-24/springboot-demo-app-<usuario>.git
+    $ git clone https://github.com/mads-ua-24-25/springboot-demo-app-<usuario>.git
     ```
 
     Cuando git te pida autenticación, usa como nombre de usuario tu usuario
@@ -343,9 +343,9 @@ Hub](https://hub.docker.com)) y ejecutadas en cualquier ordenador que
 tenga instalado el _Docker Engine_.
 
 La tecnología es muy popular y se usa en gran cantidad de empresas de
-desarrollo para simplificar la ejecución en en múltiples entornos y
+desarrollo para simplificar la ejecución en múltiples entornos y
 para que los contenedores
-(máquinas Docker en ejecución) se pueden configurar y combinar o
+(máquinas Docker en ejecución) se puedan configurar y combinar o
 ejecutar en clusters usando herramientas como
 [Kubernetes](https://kubernetes.io).
 
@@ -440,7 +440,7 @@ la desplegaremos en un _host_ para ponerla en producción.
       ```bash
       $ docker image ls 
       REPOSITORY                            TAG
-      domingogallardo/spring-boot-demoapp   latest 
+      emartineUA/spring-boot-demoapp   latest 
       ```
 
 6. Pon en marcha un la imagen con la aplicación:
@@ -470,7 +470,7 @@ la desplegaremos en un _host_ para ponerla en producción.
       ```
       $ docker container ls -a
       CONTAINER ID   IMAGE                NAMES
-      5bd9d0b055a9   domingogallardo/spring-boot-demoapp  inspiring_feynman
+      5bd9d0b055a9   emartineUA/spring-boot-demoapp  inspiring_feynman
       ```
     Puedes usar tanto el ID del contenedor (`5bd9d0b055a9`) como su
     nombre (`inspiring_feynman`) para identificarlo.
@@ -498,7 +498,7 @@ la desplegaremos en un _host_ para ponerla en producción.
     
     - `docker run -d` : lanza el contendor en modo _background_.
     - `docker run --rm` : lanza el contenedor de forma que al pararlo
-      se borra automáticamente.
+      se borre automáticamente.
     - `docker container logs <identificador>` : muestra los logs del
       contenedor indicado.
     
@@ -566,7 +566,7 @@ la desplegaremos en un _host_ para ponerla en producción.
 9.  Escribe en el fichero `README.md` del repositorio GitHub un enlace a la
     **vista pública** de la imagen en Docker Hub. La vista pública tiene el
     formato
-    [https://hub.docker.com/r/domingogallardo/spring-boot-demoapp](https://hub.docker.com/r/domingogallardo/spring-boot-demoapp).
+    [https://hub.docker.com/r/emartineUA/spring-boot-demoapp](https://hub.docker.com/r/emartineUA/spring-boot-demoapp).
 
 !!! Danger "Importante"
     Asegúrate de que es posible acceder al enlace de tu imagen docker  **sin estar logeado en
@@ -588,7 +588,7 @@ funcionamiento del formulario y la validación.
 
 Puedes ver un ejemplo adicional de validación de un formulario en el
 repositorio
-[domingogallardo/spring-boot-validate](https://github.com/domingogallardo/spring-boot-validate).
+[emartineUA/spring-boot-validate](https://github.com/emartineUA/spring-boot-validate).
 
 Verás también ahí varios ejemplos de tests en los que se realiza una
 petición POST pasando parámetros y se obtiene información del modelo
@@ -639,7 +639,7 @@ Debemos subir los commits al repositorio de GitHub.
     no has trabajado nunca de esta forma te resultará algo complicado al
     principio, pero poco a poco irás cogiéndole el tranquillo.
     
-    La idea es que antes de emepezar a escribir el código debes tener claro qué
+    La idea es que antes de empezar a escribir el código debes tener claro qué
     cosas quieres hacer. Veremos que la técnica de TDD nos ayuda a ello, pero
     por ahora no vamos a usarla. 
     
@@ -648,7 +648,7 @@ Debemos subir los commits al repositorio de GitHub.
     comprobación. Procedemos entonces a escribir código para
     implementarla. Antes de grabar el commit debemos comprobar que funciona
     correctamente. ¿Cómo lo hacemos? Podemos hacerlo de dos formas: crear un
-    sencillo controller que la llame a esa función con un ejemplo concreto o
+    sencillo controller que llame a esa función con un ejemplo concreto o
     crear un test. Una vez comprobado que funciona correctamente la función
     grabamos el commit.
     
@@ -685,7 +685,7 @@ asignatura.
 ## 7. Entrega ##
 
 - La práctica tiene una duración de 1 semana y debe estar terminada
-  el martes 19 de septiembre.
+  el martes 24 de septiembre.
 
 - La calificación de la práctica tiene un peso de un 4% en la nota
   final de la asignatura.
