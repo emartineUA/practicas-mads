@@ -14,7 +14,7 @@ ya configurados.
 
 Nosotros vamos a hacerlo más fácil todavía usando una aplicación
 ejemplo en GitHub
-[domingogallardo/spring-boot-demoapp](https://github.com/domingogallardo/spring-boot-demoapp). 
+[emartineUA/spring-boot-demoapp](https://github.com/emartineUA/spring-boot-demoapp). 
 
 La aplicación es un sencillo `Hola mundo`. En los siguientes apartados
 explicamos cómo lanzarla y cómo funciona.
@@ -418,7 +418,7 @@ public class SaludoControllerPlantilla {
 
 ### Formularios y validación ###
 
-Spring Boor simplifica la declaración y validación de formularios
+Spring Boot simplifica la declaración y validación de formularios
 usando clases Java que trabajan como modelos del formulario. Por
 ejemplo, en la aplicación se define la clase `UserData`:
 
@@ -615,7 +615,7 @@ Es posible realizar tests sobre la capa de presentación sin lanzar
 realmente el servidor web ni ejecutar realmente las peticiones
 HTTP. Se obtiene por inyección de dependencias un _mock_ de
 la clase `MockMvc` y se usan métodos como `perform(get("/"))` o
-`perform(post("/saludoform").param("nombre", "Domingo"))`.
+`perform(post("/saludoform").param("nombre", "Ester"))`.
 
 En el primer test del ejemplo siguiente se comprueba que una petición
 `GET` a la URL `/` devuelve un código HTTP OK (200) y una página HTML
@@ -669,9 +669,9 @@ public class MockMvcTest {
     @Test
     public void postShoudReturnCorrectResponse() throws Exception {
         this.mockMvc.perform(post("/saludoform")
-                .param("nombre", "Domingo"))
+                .param("nombre", "Ester"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hola Domingo")));
+                .andExpect(content().string(containsString("Hola Ester")));
     }
 }
 ```
@@ -715,11 +715,11 @@ public class MockServiceTest {
     public void greetingShouldReturnMessageFromService() throws Exception {
 
         // Y especificar lo que debe devolver una llamada a uno de sus métodos
-        when(service.saluda("Domingo")).thenReturn("Hola Mock Domingo");
+        when(service.saluda("Ester")).thenReturn("Hola Mock Ester");
 
-        this.mockMvc.perform(get("/saludo/Domingo"))
+        this.mockMvc.perform(get("/saludo/Ester"))
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hola Mock Domingo")));
+                .andExpect(content().string(containsString("Hola Mock Ester")));
     }
 }
 ```
